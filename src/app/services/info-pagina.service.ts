@@ -9,7 +9,7 @@ import { InfoPagina } from '../interfaces/info-pagina.interface';
 export class InfoPaginaService {
   info:InfoPagina={}
   cargada:boolean=false
-  equipo:any[]= []
+  equipo:any= []
 
   constructor(private http: HttpClient) {
     this.loadInfo();
@@ -25,14 +25,12 @@ private loadInfo(){
     .subscribe((res:InfoPagina) => {
       this.cargada=true
       this.info = res
-      console.log(res)
     })
 }
 private loadTeam(){
   this.http.get('https://portfolio-mbc-default-rtdb.firebaseio.com/equipo.json')
   .subscribe((res:any)=>{
     this.equipo = res
-    console.log(res)
   })
 }
 

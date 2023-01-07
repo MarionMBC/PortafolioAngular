@@ -9,5 +9,5 @@ import { InfoPaginaService } from '../../services/info-pagina.service';
 export class AboutComponent {
   constructor(public _infoService:InfoPaginaService){
     console.log(_infoService.equipo)
-   }
+  }
 }
