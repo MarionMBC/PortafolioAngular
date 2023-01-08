@@ -17,7 +17,7 @@ export class ItemComponent {
           this.product = res
           console.log(res);
         })
+
     })
   }
-
 }
