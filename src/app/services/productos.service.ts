@@ -24,4 +24,9 @@ private loadProducts(){
 }
 
 
+getProduct (id:infoProduct['cod']){
+  return this.http.get(`https://portfolio-mbc-default-rtdb.firebaseio.com/productos/${id}.json`)
+}
+
+
 }
