@@ -9,9 +9,6 @@ import { ProductosService } from '../../services/productos.service';
 export class PortfolioComponent {
 
   constructor (public _productsInfo:ProductosService){
-
-    console.log(_productsInfo.productos)
-
   }
 
 

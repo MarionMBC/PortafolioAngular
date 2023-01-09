@@ -1,4 +1,4 @@
-<header class="rk-portfolio-cover  item-inside-1">
+<header [ngStyle]="{'background-image':'url(assets/img/productos/'+idProduct+'/main.jpg)'}" class="rk-portfolio-cover  item-inside-1">
     <div class="item-inside__meta">
         <h1 class="ae-u-bolder rk-portfolio-title ">{{product.categoria}}</h1>
         <p class="ae-theta rk-portfolio-category ">{{product.producto}}</p>
@@ -25,10 +25,12 @@
             <h4 class="ae-u-bolder">{{product.subtitulo1}}</h4>
             <p class="ae-eta">{{product.desc1}}</p>
         </div>
-        <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img src="assets/img/inner-1.jpg" alt="Urku Portfolio"></div>
+        <div class="ae-grid__item item-lg-6 item-lg--offset-1">
+            <img src="assets/img/productos/{{idProduct}}/pic-1.jpg" alt="Urku Portfolio"></div>
     </div>
     <div class="ae-grid ae-grid--collapse">
-        <div class="ae-grid__item item-lg-8"><img src="assets/img/inner-2.jpg" alt="Urku Portfolio"></div>
+        <div class="ae-grid__item item-lg-8">
+            <img src="assets/img/productos/{{idProduct}}/pic-2.jpg" alt="Urku Portfolio"></div>
         <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
             <p>{{product.desc2}}</p>
             <p class="ae-u-bolder">{{product.subtitulo2}}</p>
@@ -41,8 +43,10 @@
         </div>
     </div>
 </div>
+
+
 <div class="ae-container-fluid au-pt-4 au-pb-4">
-    <div class="group-buttons"><a href="#0" class="au-mt-2 arrow-button arrow-button--right">Next Project<span
+    <div class="group-buttons"><a [routerLink]="['/item', idProduct]" class="au-mt-2 arrow-button arrow-button--right">Next Project<span
           class="arrow-cont">
           <svg>
             <use xlink:href="assets/img/symbols.svg#arrow"></use>
